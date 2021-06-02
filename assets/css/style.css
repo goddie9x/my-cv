@@ -35,12 +35,13 @@ a:visited {
 /*---------------------------------------------USEABLE---------------------------------------------------*/
 
 .container {
+    display: block;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     padding: 20px;
-    width: 800px;
+    width: 60vw;
     height: max-content;
-    margin: 30px 300px;
+    margin: 30px 20vw;
 }
 
 .clear-fixed::after {
@@ -84,12 +85,12 @@ a:visited {
     display: block;
     content: " ";
     height: 2px;
-    width: 800px;
+    max-width: 800px;
     background-color: #ccc;
     position: absolute;
     z-index: 0;
     top: 50%;
-    right: 18.5%;
+    right: 20.5%;
 }
 
 .item-content {
@@ -265,6 +266,10 @@ h1 {
 @media (max-width: 768px) {
     .main-nav-bar {
         display: none;
+    }
+    .container {
+        width: 90vw;
+        margin: 20px 5vw;
     }
     .main-nav-bar.active {
         display: inline-flex;
