@@ -168,23 +168,33 @@ ul li {
 /*---------------------------------------------HEADER---------------------------------------------------*/
 
 .header {
-    background-color: rgba(0, 0, 0, .3);
     color: aliceblue;
+    width: 100vw;
     position: fixed;
-    display: block;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    max-height: 10vh;
+    padding: 0;
+    z-index: 99;
+    margin: auto;
 }
 
 .main-nav {
-    width: 100vw;
+    width: 80vw;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, .3);
     display: inline-flex;
-    align-items: center;
     flex-direction: row;
+    max-height: 50px;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
 .logo {
     margin: 5px;
     flex-grow: 1;
+    align-self: center;
 }
 
 .logo-image {
