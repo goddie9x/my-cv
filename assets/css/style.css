@@ -21,10 +21,18 @@ body {
     flex-direction: column;
     background-color: rgba(0, 0, 0, 0.8);
     color: #ffffff;
+    overflow-x: hidden;
+    line-height: 26px;
+    font-size: 20px;
 }
 
 a {
     text-decoration: none;
+    color: rgba(0, 102, 255, 0.7);
+}
+
+a:hover {
+    color: rgba(0, 102, 255, 0.9)
 }
 
 a:visited {
@@ -67,6 +75,19 @@ ul {
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
 
+.bar-item~.bar-item {
+    margin-left: 5px;
+}
+
+.bar-item:active {
+    transform: translate(2%, 2%);
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.6);
+}
+
+.bar-item:hover {
+    opacity: .8;
+}
+
 .menu-icon {
     display: none;
     width: 30px;
@@ -96,6 +117,23 @@ ul {
     z-index: 0;
     top: 50%;
     right: 20.5%;
+}
+
+.up a img {
+    max-width: 50px;
+    position: fixed;
+    bottom: 20px;
+    z-index: 99;
+    right: 20px;
+}
+
+.up a img:hover {
+    border-radius: 100px;
+    box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.8);
+}
+
+.up a img:active {
+    transform: translate(2%, 2%);
 }
 
 .item-content {
@@ -189,46 +227,35 @@ ul li {
     border-radius: 5px;
 }
 
-.main-nav-bar-my-cv {
-    margin-left: 10px;
-}
-
-.main-nav-bar-my-schedules {
-    margin-left: 10px;
-}
-
-.main-nav-bar-about {
-    margin-left: 10px;
-}
-
 .main-nav-search {
+    flex-grow: 2;
     margin-right: 20px;
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
     padding: 0;
-    flex-grow: 2;
 }
 
 .main-nav-bar-search {
     border-radius: 3px;
     background-color: azure;
     height: 30px;
-    max-width: 80px;
+    max-width: 200px;
     margin-left: 10px;
 }
 
 .main-nav-bar-submit {
-    background-color: azure;
+    background-color: rgba(224, 214, 214, 0.8);
     border-radius: 3px;
     margin-left: 10px;
     margin-right: 10px;
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
     cursor: pointer;
+    padding: 0;
 }
 
-.main-nav-bar-my-cv {
+.main-nav-bar-product {
     background-color: rgba(197, 30, 30, 0.8);
 }
 
@@ -275,7 +302,16 @@ h1 {
 
 /*-------------------------------------------------RESPONSIVE-----------------------------------------------*/
 
-@media (max-width: 768px) {
+@media(max-width:880px) {
+    .main-nav-bar-search {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 775px) {
+    .main-nav-bar-search {
+        max-width: 30vw;
+    }
     .main-nav-bar {
         display: none;
     }
