@@ -346,8 +346,18 @@ h1 {
     color: red;
 }
 
+p,
+li,
+div {
+    line-height: 30px;
+}
+
 
 /*---------------------------------------------NAME---------------------------------*/
+
+#hello {
+    margin: 50px auto;
+}
 
 .name {
     margin-top: 60px;
@@ -416,6 +426,9 @@ h1 {
         width: 90vw;
         margin: 60px auto;
         padding: 40px 50px;
+    }
+    .bread-crumb {
+        top: 120px;
     }
     .hello__content {
         flex-direction: column;
