@@ -17,5 +17,5 @@ const $toggle = function toggleActiveClass(elements) {
 }
 
 $('.main-nav-mobile').onclick = function() {
-    $toggle([...$$('.menu-icon'), $('.main-nav-bar')]);
+    $toggle([...$$('.menu-icon'), $('.main-nav-bar-mobile')]);
 }
